@@ -1,0 +1,9 @@
+{% autoescape off %}
+
+
+hi {{message.first_name}}
+
+
+Please check on blow link to confirm your registration
+http://{{domain}}{% url 'main:email_activate' uidb64=uid token=token %}
+{% endautoescape %}

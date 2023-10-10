@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<div class='container-fluid'>
+
+
+    <div class='row'>
+        <form class='emailForm' method="POST" action="">
+          {% csrf_token %}
+            <div class="form-group">
+              <label for="exampleInputEmail1">نام کوچک</label>
+            {{form.first_name}}
+            
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">نام بزرگ</label>
+              {{form.last_name}}
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">ایمیل</label>
+              {{form.email}}
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">پیام شما</label>
+              {{form.message}}
+            </div>
+            
+            <button type="submit" class="btn btn-primary">ارسال</button>
+          </form>
+    
+    </div>
+
+</div>
+
+  {% endblock content %}
